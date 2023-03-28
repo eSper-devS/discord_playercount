@@ -8,7 +8,9 @@ import redis
 
 global client, player_count
 player_count = None
-client = discord.Client()
+
+intents = discord.Intents.default()
+client = discord.Client(intents=intents)
 
 @client.event
 async def on_ready():
